@@ -1,0 +1,83 @@
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+\usepackage{etoolbox}
+\usepackage{placeins}
+\makeatletter
+%\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+%  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+%}%
+\makeatother
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Add any additional LaTeX packages and macros here
+\usepackage{siunitx}
+
+%---
+
+\iflatexml
+% Add any LateXML specific commands here
+
+%---
+
+\else
+% The commands below will only change the exported PDF. Edit or remove as needed
+
+\paperfield{Field of the paper}
+\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+\corraddress{Author One PhD, Department, Institution, City, State or Province, Postal Code, Country}
+\corremail{correspondingauthor@email.com}
+\presentadd{Department, Institution, City, State or Province, Postal Code, Country}
+\fundinginfo{Funder One, Funder One Department, Grant/Award Number: 123456, 123457 and 123458; Funder Two, Funder Two Department, Grant/Award Number: 123459}
+\fi
+
+%---
+
+\papertype{Software News and Updates}
+
+\title{International Journal of Quantum Chemistry LaTeX Template}
+
+
+\author[1]{Authors}
+
+\affil[1]{Authorea Team}
+
+
+
+\runningauthor{Authors}
+
+% Add any additional LaTeX packages and macros here
+\usepackage{siunitx}
+
+%---
+
+\iflatexml
+% Add any LateXML specific commands here
+
+%---
+
+\else
+% The commands below will only change the exported PDF. Edit or remove as needed
+
+\paperfield{Field of the paper}
+\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+\corraddress{Author One PhD, Department, Institution, City, State or Province, Postal Code, Country}
+\corremail{correspondingauthor@email.com}
+\presentadd{Department, Institution, City, State or Province, Postal Code, Country}
+\fundinginfo{Funder One, Funder One Department, Grant/Award Number: 123456, 123457 and 123458; Funder Two, Funder Two Department, Grant/Award Number: 123459}
+\fi
+%---
