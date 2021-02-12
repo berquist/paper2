@@ -3,6 +3,7 @@
 \begin{document}
 \maketitle
 \selectlanguage{english}
+\listoffixmes{}
 \begin{abstract}
 This is a LaTeX template designed for use by the \textbf{International Journal of Quantum Chemistry}. Please consult the journal's author guidelines in order to confirm that your manuscript complies with the journal's requirements. When you are ready to submit your manuscript, download/export it in LaTeX or Word format and submit your document at \href{https://mc.manuscriptcentral.com/qua}{https://mc.manuscriptcentral.com/qua}. Please replace this text with your abstract.
 
@@ -19,7 +20,7 @@ cclib\cite{Oboyle2008} (\url{http://cclib.github.io/} and \url{https://github.co
 \item to maximize interoperability with other open source computational chemistry and cheminformatic software libraries.
 \end{itemize}
 
-on Zenodo since version 1.2\cite{Langner2014}, with the latest version being 1.7\cite{Berquist2021}
+In addition to following traditional semantic versioning practices, literature-citeable versions of cclib are also available through Zenodo, from 1.2\cite{Langner2014} through 1.7\cite{Berquist2021}, with a new citation for each minor release.
 
 Anecdotally, a random sampling of the latest citations for the original paper shows that most citations are actually for GaussSum, one of the earliest tools that integrated cclib as a core component.
 
@@ -39,10 +40,10 @@ Since 2015 (TODO), cclib has participated in Google Summer of Code (GSoC, \url{h
 
 TODO put in paragraph form:
 \begin{itemize}
-\item 2015: ?
-\item 2016: ?
-\item 2017: ?
-\item 2018: ?
+\item 2015: did not participate
+\item 2016: Support for both reading and writing CJSON (Sanjeed Schamnad)
+\item 2017: Support for writing Molden and WFX files (Sagar Gaur)
+\item 2018: New parsers for Molcas and Turbomole (Kunal Sharma)
 \item 2019: did not participate
 \item 2020: atomic partial charge methods (Minsik)
 \end{itemize}
@@ -52,10 +53,20 @@ TODO put in paragraph form:
 \section{Highlighted developments in cclib 2.0}
 \subsection{Parsers}
 
-The programs currently supported along with their first version cclib ``knows'' about are ADF (since TODO), Dalton (since TODO), Firefly (since TODO), GAMESS (US) (since TODO), GAMESS-UK (since TODO), Gaussian (since TODO), Jaguar (since TODO), Molcas (since TODO), Molpro (since TODO), MOPAC (since TODO), NWChem (since TODO), ORCA (since TODO), Psi4 (since TODO), Q-Chem (since TODO), and Turbomole (since TODO).  Additionally, formatted checkpoint files (FChk or \texttt{fchk}) produced by Gaussian and Q-Chem can also be parsed, and a GAMESS \texttt{*.dat} parser has been requested.  Some programs produce even more output files by default, such as Molpro and especially Turbomole, TODO
+The programs currently supported along with their first version cclib ``knows'' about are ADF (since TODO), Dalton (since TODO), Firefly (since TODO), GAMESS (US) (since TODO), GAMESS-UK (since TODO), Gaussian (since TODO), Jaguar (since TODO), Molcas (since TODO), Molpro (since TODO), MOPAC (since TODO), NWChem (since TODO), ORCA (since TODO), Psi4 (since TODO), Q-Chem (since TODO), and Turbomole (since TODO).  Additionally, formatted checkpoint files (FChk or \texttt{fchk}) produced by Gaussian and Q-Chem can also be parsed, and a GAMESS \texttt{*.dat} parser has been requested.  Some programs produce even more output files by default, such as Molpro and especially Turbomole, requiring the parsing of multiple files and merging results into a single \texttt{ccData} object.
 
 \subsection{Bridges}
+    * New bridge to Atomic Simulation Environment (Felipe S. S. Schneider)
+    * New bridge to PySCF (Amanda Dumi)
+    * [GSOC2020] New bridge to Horton (Minsik Cho)
+    * New bridge to Psi4 (Felipe S. S. Schneider)
 \subsection{Methods}
+
+    * [GSOC2020] New methods: Bader's QTAIM, Bickelhaupt, Stockholder, Hirshfeld, and DDEC6 partial charges (Minsik Cho)
+    * [GSOC2020] Support reading cube files in volume method (Minsik Cho)
+
+\subsection{Readers and writers}
+
 
 \section{The future of cclib}
 

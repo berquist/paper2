@@ -6,11 +6,18 @@
 \usepackage{tabulary}
 \usepackage{booktabs}
 \usepackage{amsfonts,amsmath,amssymb}
-\usepackage{natbib}
 \usepackage{hyperref}
 \hypersetup{colorlinks=false,pdfborder={0 0 0}}
 \usepackage{etoolbox}
 \usepackage{placeins}
+\usepackage[%
+    inline = true,%
+    margin = false,%
+    status = draft,%
+    % author = EJB%
+]{fixme}
+\fxusetheme{colorsig}
+% \FXRegisterAuthor{kdj}{akdj}{KDJ}
 \makeatletter
 %\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
 %  \errmessage{\noexpand\@combinedblfloats could not be patched}%
